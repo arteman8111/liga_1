@@ -1,0 +1,86 @@
+.about {
+  @include container;
+  position: relative;
+  background-color: $color-bg-white;
+  padding: 120px 350px 120px 590px;
+  font-family: $ff-placeholder-pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-dark-blue;
+
+  @include vp-769 {
+    padding: 50px;
+    padding-left: 200px;
+  }
+
+  @include vp-319 {
+    padding: 25px;
+  }
+}
+
+.about__subdescription {
+  font-family: $ff-placeholder-pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-dark-blue;
+}
+
+.about__title {
+  font-family: $ff-placeholder;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  color: $color-default-dark-blue
+}
+
+.about__description::after {
+  content: "Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.";
+  display: block;
+  margin: 0;
+  margin-top: 30px;
+
+  @include vp-319 {
+    display: none;
+  }
+}
+
+.about__image {
+  position: absolute;
+  top: 120px;
+  left: 350px;
+
+  @include vp-769 {
+    left: 20px;
+  }
+
+  @include vp-319 {
+    display: none;
+  }
+}
+
+.about__button {
+  @include btn {
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-sky-blue;
+    border: 1px solid $color-sky-blue;
+    background-color: $color-bg-white;
+    padding: 15px 45px;
+  }
+
+  @include hover {
+    transition: $trans-default;
+    color: $color-bg-white;
+    background-color: $color-sky-blue;
+  }
+
+  margin-top: 35px;
+
+  @include vp-769 {
+    margin: 0;
+  }
+
+  @include vp-319 {
+    padding: 8px 30px;
+  }
+}

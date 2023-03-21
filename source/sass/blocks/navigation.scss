@@ -1,0 +1,145 @@
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 30px 350px;
+
+  @include vp-769 {
+    padding: 20px 50px;
+  }
+
+  @include vp-319 {
+    padding: 15px 25px;
+  }
+}
+
+.navigation__email-description,
+.navigation__phone-description {
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.navigation__email {
+  @include vp-769 {
+    margin-left: auto;
+    margin-right: 40px;
+  }
+}
+
+.navigation__phome {
+  @include vp-319 {
+  }
+}
+
+.navigation__link {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.navigation__item {
+  position: relative;
+  display: flex;
+  gap: 15px
+
+}
+
+.navigation__item:first-child {
+  &:hover {
+    opacity: 1;
+    color: $color-transparent;
+
+    svg {
+      fill: $color-default-white;
+    }
+
+    ::after {
+      color: $color-transparent;
+    }
+  }
+}
+
+.navigation__link {
+  font-family: $ff-placeholder-pt-mono;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-default-gray;
+}
+
+.navigation__title {
+  position: relative;
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: $color-default-gray;
+
+  @include vp-319 {
+    display: none;
+  }
+}
+
+.navigation__title::after {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  content: 'умные технологии';
+  font-weight: 500;
+  font-size: 12px;
+  color: $color-transparent;
+  line-height: 14px;
+
+  @include vp-319 {
+    display: none;
+  }
+}
+
+.navigation__svg {
+  fill: $color-sky-blue;
+
+  @include vp-319 {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.navigation__button {
+  @include btn {
+    color: $color-default-gray;
+    background-color: $color-default-dark-blue;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 15px 12px 15px;
+  }
+
+  &:hover {
+    background: $color-sky-blue;
+    color: $color-default-white;
+    transition: $trans-default;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.navigation__logo {
+  fill: $color-sky-blue;
+}

@@ -1,0 +1,165 @@
+.service {
+  @include container;
+  padding: 70px 50px 140px 50px;
+  background-color: $color-default-dark-blue;
+
+  @include vp-319 {
+    padding: 50px 25px;
+  }
+}
+
+.service__list {
+  margin: 0;
+  padding: 0;
+  // display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  list-style: none;
+  gap: 85px;
+
+  @include vp-769 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  @include vp-319 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.service__item {
+  width: 100%;
+  position: relative;
+  background-image: url("../img/service/element-bg-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include hover {
+    .service__link {
+      transition: $trans-600;
+      outline: 1px solid $color-sky-blue;
+    }
+
+    .service__button {
+      transition: $trans-600;
+      background-color: $color-default-white;
+      opacity: 1;
+
+      svg {
+        fill: $color-sky-blue;
+      }
+    }
+  }
+
+  @include vp-769 {
+    min-height: 250px;
+  }
+
+  @include retina {
+    background-image: url("../img/service/element-bg-1@2x.png");
+  }
+}
+
+.service__item:nth-child(2) {
+  background-image: url("../img/service/element-bg-2.png");
+  @include retina {
+    background-image: url("../img/service/element-bg-2@2x.png");
+  }
+}
+
+.service__item:nth-child(3) {
+  background-image: url("../img/service/element-bg-3.png");
+  @include retina {
+    background-image: url("../img/service/element-bg-3@2x.png");
+  }
+}
+
+.service__link {
+  display: block;
+  min-height: 650px;
+
+  @include vp-769 {
+    min-height: 250px;
+  }
+}
+
+.service__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  color: $color-default-white;
+
+  @include vp-319 {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+}
+
+.service__title::before {
+  @include vp-319 {
+    font-size: 28px;
+    line-height: 140.62%;
+    font-weight: 400;
+    color: $color-default-white;
+    content: "Товары и услуги";
+  }
+}
+
+.service__title::after {
+  @media(min-width: ($vp-320 - 1px)) {
+    font-size: 36px;
+    line-height: 51px;
+    font-weight: 400;
+    color: $color-default-white;
+    content: " предлагает следующие товары и услуги";
+  }
+}
+
+.service__subtitle {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $color-default-white;
+  padding: 50px 40px;
+
+  @include vp-319 {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 30px;
+  }
+}
+
+.service__button {
+  position: absolute;
+  @include btn-abstract;
+  top: 590px;
+  right: 0;
+  padding: 26px 26px 26px 30px;
+  background-color: $color-sky-blue;
+  border-radius: 3px 0px 0px 0px;
+  border: none;
+
+  @include vp-769 {
+    top: 205px;
+  }
+
+  @include vp-319 {
+    padding: 17px 20px;
+  }
+
+
+}
+
+.service__button svg {
+  fill: #FFFFFF;
+}

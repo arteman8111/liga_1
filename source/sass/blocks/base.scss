@@ -1,0 +1,105 @@
+.base {
+  @include container;
+  padding: 185px 280px;
+  background-color: $color-default-dark-blue;
+  background-image: url("../img/bg/base-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: $color-default-gray;
+
+  @include vp-769 {
+    padding: 50px 85px;
+    font-size: 22px;
+    line-height: 155%;
+  }
+
+  @include vp-319 {
+    padding: 50px 20px;
+  }
+
+  @include retina {
+    background-image: url("../img/bg/base-bg@2x.png");
+  }
+}
+
+.base__text-320 {
+  display: none;
+
+  @include vp-319 {
+    display: inline;
+  }
+}
+
+.base__text-770 {
+  display: inline;
+
+  @include vp-319 {
+    display: none;
+  }
+}
+
+.base__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  @include vp-769 {
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  @include vp-319 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.base__description {
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 155%;
+
+  @include vp-319 {
+    font-size: 14px;
+    line-height: 155%;
+  }
+}
+
+.base__button {
+  @include btn {
+    padding: 17px 10px;
+    color: $color-default-gray;
+    background-color: $color-sky-blue;
+    font-size: 18px;
+    line-height: 21px;
+    border: none;
+  }
+
+  margin-top: 40px;
+
+  &:hover {
+    color: $color-sky-blue;
+    background-color: $color-default-white;
+    transition: $trans-default;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include vp-319 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

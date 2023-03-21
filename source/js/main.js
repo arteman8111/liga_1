@@ -24,27 +24,61 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ---------------------------------
+// about
+const popup = document.querySelector('.popup');
+const about = document.querySelector('.about');
 
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
+const aboutDescription = document.createElement('p');
+const aboutCloseButton = document.createElement('button');
 
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
+function getDescription() {
+  aboutDescription.textContent = 'Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия. Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов';
+  aboutDescription.classList.add('about__subdescription');
+  aboutCloseButton.textContent = 'Свернуть';
+  aboutCloseButton.classList.add('about__button');
+  about.insertAdjacentElement('beforeend', aboutDescription);
+  about.insertAdjacentElement('beforeend', aboutCloseButton);
+  popup.classList.add('visually-hidden');
+}
 
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
+function closeDescription() {
+  aboutDescription.remove();
+  aboutCloseButton.remove();
+  popup.classList.remove('visually-hidden');
+  aboutCloseButton.removeEventListener('click', getDescription);
+}
 
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
+popup.addEventListener('click', getDescription);
+aboutCloseButton.addEventListener('click', closeDescription);
 
-// для адаптивного JS используется matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
+// accordion
 
-// используйте .closest(el)
+const boxes = Array.from(document.querySelectorAll('.footer__container')); // считываем все элементы аккордеона в массив
+
+boxes.forEach((box) => {
+  box.addEventListener('click', boxHandler); // при нажатии на бокс вызываем ф-ию boxHanlder
+});
+
+function boxHandler(e) {
+  e.preventDefault(); // сбрасываем стандартное поведение
+  let currentBox = e.target.closest('.footer__container'); // определяем текущий бокс
+  let currentContent = e.target.nextElementSibling; // находим скрытый контент
+  currentBox.classList.toggle('active'); // присваиваем ему активный класс
+  if (currentBox.classList.contains('active')) {
+    // если класс активный ..
+    currentContent.style.maxHeight = currentContent.scrollHeight + 'px'; // открываем контент
+  } else {
+    // в противном случае
+    currentContent.style.maxHeight = 0; // скрываем контент
+  }
+}
+
+// smooth scroll
+const smoothLink = document.querySelector('.base__button');
+smoothLink.addEventListener('click', function () {
+  const id = smoothLink.getAttribute('href');
+
+  window.querySelector(id).scroll({
+    behavior: 'smooth',
+  });
+});

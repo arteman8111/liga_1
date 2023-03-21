@@ -10,6 +10,10 @@
 
 @import "variables";
 @import "mixins";
+
+@import "custom/btn";
+@import "custom/checkbox";
+
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
@@ -18,11 +22,16 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
 @import "blocks/modal";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+@import "blocks/main-header";
+@import "blocks/navigation";
+@import "blocks/base";
+@import "blocks/advantages";
+@import "blocks/about";
+@import "blocks/service";
+@import "blocks/form";
+@import "blocks/footer";
+@import "blocks/link";
 
 // ---------------------------------
 
