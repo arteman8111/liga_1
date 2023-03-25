@@ -8,6 +8,7 @@
 
   @include vp-769 {
     padding: 20px 50px;
+    justify-content: space-between;
   }
 
   @include vp-319 {
@@ -24,19 +25,17 @@
 }
 
 .navigation__phone {
-  margin-right: 90px //117;
+  margin-right: 90px;
+  @include vp-769 {
+    margin-right: 0;
+  }
 }
 
 .navigation__email {
   margin-right: 25px; //170;
   @include vp-769 {
     margin-left: auto;
-    margin-right: 40px;
-  }
-}
-
-.navigation__phome {
-  @include vp-319 {
+    margin-right: 30px;
   }
 }
 
@@ -92,7 +91,6 @@
   font-size: 25px;
   font-weight: 700;
   margin-left: 15px;
-  margin-top: 10px;
   color: $color-default-gray;
 
   @include vp-319 {
@@ -101,7 +99,8 @@
 }
 
 .navigation__title::after {
-  position: absolute;
+  display: block;
+  width: 100%;
   top: 20px;
   left: 0;
   content: 'умные технологии';
@@ -126,6 +125,9 @@
 
 .navigation__item:last-child {
   margin-right: 54px; //150
+  @include vp-769 {
+    margin: 0;
+  }
 }
 
 .navigation__button {

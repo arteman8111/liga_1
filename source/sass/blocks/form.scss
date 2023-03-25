@@ -38,6 +38,9 @@
   text-align: center;
 
   @include vp-319 {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
     font-size: 14px;
     line-height: 134.4%;
   }
@@ -52,10 +55,11 @@
   line-height: 22px;
   background-color: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
+  color: $color-default-white;
+}
 
-  @media (max-width: 616px) {
-    width: 100%;
-  }
+.form__input-phone {
+  width: 100%;
 }
 
 .form__input:hover,
@@ -64,17 +68,17 @@
   outline: 1px solid $color-default-white;
 }
 
-.form__input::placeholder {
+.form__input::-webkit-input-placeholder {
   color: $color-default-white;
 }
 
 .form__img {
   position: absolute;
-  top: 400px;
-  left: 200px;
+  top: 300px;
+  left: 50px;
 
-  @include vp-769 {
-    display: none
+  @media (max-width: 1284px) {
+    display: none;
   }
 }
 
@@ -122,15 +126,37 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
+
+  @include vp-769 {
+    margin: 0;
+  }
+
+  @include vp-319 {
+    margin: 0;
+    gap: 0;
+    display: inline-flex;
+  }
 }
 
 .form__title,
 .form__description {
   width: 100%;
+
+  @include vp-769 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    text-align: start;
+  }
 }
 
-.form__input {
-  width: 44%
+.form__label-phone {
+  width: 44%;
+
+  @include vp-319 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .form__textarea {
@@ -139,5 +165,9 @@
 
 .form__label {
   width: 50%;
-  order: 2
+  order: 2;
+
+  @include vp-319 {
+    margin-top: 25px;
+  }
 }

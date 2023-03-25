@@ -904,6 +904,7 @@ button,
   line-height: 22px;
   background-color: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
+  color: #FFFFFF;
 }
 
 .modal__input:hover,
@@ -1143,12 +1144,12 @@ button,
   font-size: 25px;
   font-weight: 700;
   margin-left: 15px;
-  margin-top: 10px;
   color: #F2F5F7;
 }
 
 .navigation__title::after {
-  position: absolute;
+  display: block;
+  width: 100%;
   top: 20px;
   left: 0;
   content: "умные технологии";
@@ -1220,6 +1221,9 @@ button,
   padding: 185px 0 185px 20%;
   background-color: #041827;
   background-image: url("../img/bg/base-bg.png");
+  background-image: -webkit-image-set(url("../img/bg/base-bg@2x.webp") 2x, url("../img/bg/base-bg.webp") 1x, url("../img/bg/base-bg@2x.png") 2x url("../img/bg/base-bg.png") 1x);
+  background-image: -webkit-image-set(url("../img/bg/base-bg@2x.webp") type("image/webp") 2x, url("../img/bg/base-bg.webp") type("image/webp") 1x, url("../img/bg/base-bg@2x.png") 2x, url("../img/bg/base-bg.png") 1x);
+  background-image: image-set(url("../img/bg/base-bg@2x.webp") type("image/webp") 2x, url("../img/bg/base-bg.webp") type("image/webp") 1x, url("../img/bg/base-bg@2x.png") 2x, url("../img/bg/base-bg.png") 1x);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1305,7 +1309,7 @@ button,
 
 .advantages {
   background-color: #F8FDFF;
-  padding: 120px 0;
+  padding: 120px 50px;
 }
 
 .advantages__list {
@@ -1324,6 +1328,7 @@ button,
 
 .advantages__item {
   margin: 0;
+  padding: 40px 0;
   max-width: 595px;
   height: 300px;
   border: 1px solid rgb(235, 235, 235);
@@ -1333,16 +1338,10 @@ button,
   line-height: 135%;
   color: #041827;
   padding-left: 40px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  overflow: hidden;
+  min-height: 300px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .advantages__title {
@@ -1360,7 +1359,6 @@ button,
 
 .advantages__description {
   margin: 0;
-  margin-bottom: 50px;
 }
 
 .about {
@@ -1438,7 +1436,7 @@ button,
 
 .service {
   background-color: #041827;
-  padding: 70px 0;
+  padding: 70px 25px;
 }
 
 .service__list {
@@ -1459,6 +1457,9 @@ button,
   width: 100%;
   position: relative;
   background-image: url("../img/service/element-bg-1.png");
+  background-image: -webkit-image-set(url("../img/service/element-bg-1@2x.webp") 2x, url("../img/service/element-bg-1.webp") 1x, url("../img/service/element-bg-1@2x.png") 2x url("../img/service/element-bg-1.png") 1x);
+  background-image: -webkit-image-set(url("../img/service/element-bg-1@2x.webp") type("image/webp") 2x, url("../img/service/element-bg-1.webp") type("image/webp") 1x, url("../img/service/element-bg-1@2x.png") 2x, url("../img/service/element-bg-1.png") 1x);
+  background-image: image-set(url("../img/service/element-bg-1@2x.webp") type("image/webp") 2x, url("../img/service/element-bg-1.webp") type("image/webp") 1x, url("../img/service/element-bg-1@2x.png") 2x, url("../img/service/element-bg-1.png") 1x);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1466,10 +1467,22 @@ button,
 
 .service__item:nth-child(2) {
   background-image: url("../img/service/element-bg-2.png");
+  background-image: -webkit-image-set(url("../img/service/element-bg-2@2x.webp") 2x, url("../img/service/element-bg-2.webp") 1x, url("../img/service/element-bg-2@2x.png") 2x url("../img/service/element-bg-2.png") 1x);
+  background-image: -webkit-image-set(url("../img/service/element-bg-2@2x.webp") type("image/webp") 2x, url("../img/service/element-bg-2.webp") type("image/webp") 1x, url("../img/service/element-bg-2@2x.png") 2x, url("../img/service/element-bg-2.png") 1x);
+  background-image: image-set(url("../img/service/element-bg-2@2x.webp") type("image/webp") 2x, url("../img/service/element-bg-2.webp") type("image/webp") 1x, url("../img/service/element-bg-2@2x.png") 2x, url("../img/service/element-bg-2.png") 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .service__item:nth-child(3) {
   background-image: url("../img/service/element-bg-3.png");
+  background-image: -webkit-image-set(url("../img/service/element-bg-3@2x.webp") 2x, url("../img/service/element-bg-3.webp") 1x, url("../img/service/element-bg-3@2x.png") 2x url("../img/service/element-bg-3.png") 1x);
+  background-image: -webkit-image-set(url("../img/service/element-bg-3@2x.webp") type("image/webp") 2x, url("../img/service/element-bg-3.webp") type("image/webp") 1x, url("../img/service/element-bg-3@2x.png") 2x, url("../img/service/element-bg-3.png") 1x);
+  background-image: image-set(url("../img/service/element-bg-3@2x.webp") type("image/webp") 2x, url("../img/service/element-bg-3.webp") type("image/webp") 1x, url("../img/service/element-bg-3@2x.png") 2x, url("../img/service/element-bg-3.png") 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .service__link {
@@ -1579,6 +1592,11 @@ button,
   line-height: 22px;
   background-color: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
+  color: #FFFFFF;
+}
+
+.form__input-phone {
+  width: 100%;
 }
 
 .form__input:hover,
@@ -1591,26 +1609,10 @@ button,
   color: #FFFFFF;
 }
 
-.form__input::-moz-placeholder {
-  color: #FFFFFF;
-}
-
-.form__input:-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-.form__input::-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-.form__input::placeholder {
-  color: #FFFFFF;
-}
-
 .form__img {
   position: absolute;
-  top: 400px;
-  left: 200px;
+  top: 300px;
+  left: 50px;
 }
 
 .form__button {
@@ -1756,7 +1758,7 @@ button,
   width: 100%;
 }
 
-.form__input {
+.form__label-phone {
   width: 44%;
 }
 
@@ -1860,9 +1862,8 @@ button,
 }
 
 .footer__title::after {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  display: block;
+  width: 100%;
   content: "умные технологии";
   font-weight: 500;
   font-size: 12px;
@@ -1873,6 +1874,7 @@ button,
 .footer__subtitle {
   margin: 0;
   margin-top: 10px;
+  margin-bottom: 20px;
   padding: 0;
   font-style: normal;
   letter-spacing: 0.05em;
@@ -1987,9 +1989,18 @@ button,
   }
 }
 
+@media (max-width: 1284px) {
+  .form__img {
+    display: none;
+  }
+}
+
 @media (max-width: 769px) {
   .navigation__list {
     padding: 20px 50px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
   .navigation__email-description,
@@ -1997,9 +2008,17 @@ button,
     display: none;
   }
 
+  .navigation__phone {
+    margin-right: 0;
+  }
+
   .navigation__email {
     margin-left: auto;
-    margin-right: 40px;
+    margin-right: 30px;
+  }
+
+  .navigation__item:last-child {
+    margin: 0;
   }
 
   .navigation__button {
@@ -2018,11 +2037,26 @@ button,
   }
 
   .advantages {
-    padding: 50px;
+    padding: 50px 50px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: minmax(auto, 320px) minmax(auto, 320px);
+    grid-template-columns: minmax(auto, 320px) minmax(auto, 320px);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 29px;
   }
 
   .advantages__item {
-    padding: 0;
+    padding: 20px 0;
+    padding-left: 41px;
+    height: auto;
+  }
+
+  .advantages__description {
+    margin: 0;
   }
 
   .about {
@@ -2036,6 +2070,10 @@ button,
 
   .about__button {
     margin: 0;
+  }
+
+  .service {
+    padding: 60px 50px;
   }
 
   .service__list {
@@ -2053,6 +2091,12 @@ button,
     min-height: 250px;
   }
 
+  .service__title {
+    text-align: start;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
   .service__button {
     top: 205px;
   }
@@ -2062,8 +2106,16 @@ button,
     padding: 50px 25px;
   }
 
-  .form__img {
-    display: none;
+  .form__container {
+    margin: 0;
+  }
+
+  .form__title,
+  .form__description {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    text-align: start;
   }
 
   .footer {
@@ -2115,12 +2167,6 @@ button,
   }
 
   .modal--fit-content .modal__content {
-    width: 100%;
-  }
-}
-
-@media (max-width: 616px) {
-  .form__input {
     width: 100%;
   }
 }
@@ -2202,6 +2248,7 @@ button,
     font-size: 14px;
     line-height: 135%;
     margin: 0;
+    margin-bottom: 50px;
   }
 
   .about {
@@ -2236,6 +2283,9 @@ button,
   }
 
   .service__title {
+    margin: 0;
+    text-align: start;
+    margin-bottom: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2271,6 +2321,9 @@ button,
   }
 
   .form__description {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
     font-size: 14px;
     line-height: 134.4%;
   }
@@ -2281,6 +2334,23 @@ button,
 
   .form__label {
     width: 100%;
+  }
+
+  .form__container {
+    margin: 0;
+    gap: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  .form__label-phone {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form__label {
+    margin-top: 25px;
   }
 
   .footer {
@@ -2336,6 +2406,7 @@ button,
   }
 
   .footer__box {
+    margin: 0;
     padding: 35px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -2392,24 +2463,6 @@ button,
 
   .link__list {
     margin-top: 15px;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .base {
-    background-image: url("../img/bg/base-bg@2x.png");
-  }
-
-  .service__item {
-    background-image: url("../img/service/element-bg-1@2x.png");
-  }
-
-  .service__item:nth-child(2) {
-    background-image: url("../img/service/element-bg-2@2x.png");
-  }
-
-  .service__item:nth-child(3) {
-    background-image: url("../img/service/element-bg-3@2x.png");
   }
 }
 

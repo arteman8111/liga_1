@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
@@ -97,6 +97,7 @@
       <!-- about -->
       <aside class="about">
         <picture>
+          <source srcset="../img/about/2022.webp 1x,  ../img/about/2022@2x.webp 2x" type="image/webp">
           <source srcset="../img/about/2022.png 1x,  ../img/about/2022@2x.png 2x">
           <img class="about__image" src="../img/about/2022.png" width="150" height="320" alt="2022">
         </picture>
@@ -148,6 +149,7 @@
         <h2 class="form__title">Остались вопросы? Задайте их нам!</h2>
         <p class="form__description">Мы проконсультируем Вас бесплатно</p>
         <picture>
+          <source srcset="../img/form/airlane.webp 1x,  ../img/form/airlane@2x.webp 2x" type="image/webp">
           <source srcset="../img/form/airlane.png 1x,  ../img/form/airlane@2x.png 2x">
           <img class="form__img" src="../img/form/airlane.png" width="350" height="589" alt="Самолет">
         </picture>
@@ -155,10 +157,9 @@
           <div class="form__container">
             <label for="name" class="visually-hidden"></label>
             <input class="form__input" type="text" id="name" name="name" placeholder="Имя" required>
-
-            <label for="tel" class="visually-hidden"></label>
-            <input class="form__input" type="tel" id="tel" name="tel" placeholder="Телефон" required>
-
+            <label class="form__label-phone" for="tel">
+              <input class="form__input form__input-phone" type="tel" id="tel" name="tel" placeholder="Телефон" required>
+            </label>
             <label for="form-description" class="visually-hidden"></label>
             <textarea class="form__input form__textarea" name="form-description" id="form-description" cols="30"
               rows="10" placeholder="Ваш вопрос" required></textarea>
@@ -249,9 +250,8 @@
             <label class="modal__label" for="modal-name">
               <input class="modal__input" type="text" name="name" id="modal-name" placeholder="Имя" required autofocus>
             </label>
-            <label class="modal__label" for="modal-phone">
-              <input class="modal__input" type="text" name="tel" id="modal-phone" placeholder="Телефон"
-                pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="10" required>
+            <label class="modal__label modal__label-phone" for="modal-phone">
+              <input class="modal__input" type="text" name="tel" id="modal-phone" placeholder="Телефон" required>
             </label>
             <label for="description" class="modal__label">
               <textarea class="modal__input" name="description" id="description" cols="30" rows="10"

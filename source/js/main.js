@@ -1,6 +1,7 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
+import { Form } from './modules/form-validate/form';
+import { initPhoneInput } from './modules/form-validate/init-phone-input';
 
 // ---------------------------------
 
@@ -82,3 +83,38 @@ smoothLink.addEventListener('click', function () {
     behavior: 'smooth',
   });
 });
+
+// focus on modal input first
+
+document.addEventListener('DOMContentLoaded', function () {
+  let $btn = document.querySelector('.navigation__button');
+  let $input = document.querySelector('.modal__input');
+  $btn.addEventListener('click', function () {
+    setTimeout(function () {
+      $input.focus();
+    }, 100);
+  });
+});
+
+// input tel validate
+
+let modalInpPhone = document.querySelector('.modal__label-phone');
+let formInpPhone = document.querySelector('.form__label-phone')
+initPhoneInput(modalInpPhone);
+initPhoneInput(formInpPhone);
+// Проверяем фокус
+// inp.addEventListener('focus', () => {
+//   // Если там ничего нет или есть, но левое
+//   if (!/^\+\d*$/.test(inp.value)) {
+//     inp.value = '+7(';
+//   }
+// });
+
+// inp.addEventListener('keypress', (evt) => {
+//   // Отменяем ввод не цифр
+//   if (!/\d/.test(evt.key)) {
+//     evt.preventDefault();
+//   }
+// });
+
+

@@ -1,9 +1,9 @@
 .advantages {
   background-color: $color-bg-white;
-  padding: 120px 0;
+  padding: 120px 50px;
 
   @include vp-769 {
-    padding: 50px;
+    padding: 50px 50px;
   }
 
   @include vp-319 {
@@ -20,6 +20,12 @@
   list-style: none;
   gap: 30px;
 
+  @include vp-769 {
+    grid-template-columns: minmax(auto, 320px) minmax(auto, 320px);
+    justify-content: center;
+    gap: 29px;
+  }
+
   @include vp-319 {
     display: flex;
     flex-direction: column;
@@ -28,6 +34,7 @@
 
 .advantages__item {
   margin: 0;
+  padding: 40px 0;
   max-width: 595px;
   height: 300px;
   border: 1px solid $color-bg-small-white;
@@ -37,9 +44,9 @@
   line-height: 135%;
   color: $color-default-dark-blue;
   padding-left: 40px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+  overflow: hidden;
+  min-height: 300px;
+  box-sizing: border-box;
 
   @include hover {
     background-color: $color-sky-blue;
@@ -55,7 +62,9 @@
   }
 
   @include vp-769 {
-    padding: 0;
+    padding: 20px 0;
+    padding-left: 41px;
+    height: auto;
   }
 
   @include vp-319 {
@@ -88,11 +97,15 @@
 
 .advantages__description {
   margin: 0;
-  margin-bottom: 50px;
+
+  @include vp-769 {
+    margin: 0;
+  }
 
   @include vp-319 {
     font-size: 14px;
     line-height: 135%;
     margin: 0;
+    margin-bottom: 50px;
   }
 }
