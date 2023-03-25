@@ -1,7 +1,6 @@
 .service {
-  @include container;
-  padding: 70px 50px 140px 50px;
   background-color: $color-default-dark-blue;
+  padding: 70px 0;
 
   @include vp-319 {
     padding: 50px 25px;
@@ -11,10 +10,9 @@
 .service__list {
   margin: 0;
   padding: 0;
-  // display: flex;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  grid-template-columns: minmax(auto,350px) minmax(auto,350px) minmax(auto,350px);
+  justify-content: center;
   list-style: none;
   gap: 85px;
 
@@ -90,6 +88,8 @@
 .service__title {
   margin: 0;
   padding: 0;
+  text-align: center;
+  margin-right: 400px;
   margin-bottom: 40px;
   font-size: 36px;
   line-height: 51px;

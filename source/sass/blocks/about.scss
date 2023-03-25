@@ -2,7 +2,7 @@
   @include container;
   position: relative;
   background-color: $color-bg-white;
-  padding: 120px 350px 120px 590px;
+  padding: 0 100px 100px 600px;
   font-family: $ff-placeholder-pt-mono;
   font-size: 16px;
   line-height: 22px;
@@ -46,7 +46,7 @@
 
 .about__image {
   position: absolute;
-  top: 120px;
+  top: 0px;
   left: 350px;
 
   @include vp-769 {

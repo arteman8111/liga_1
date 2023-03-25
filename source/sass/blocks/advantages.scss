@@ -1,7 +1,6 @@
 .advantages {
-  @include container;
-  padding: 120px 50px;
   background-color: $color-bg-white;
+  padding: 120px 0;
 
   @include vp-769 {
     padding: 50px;
@@ -16,8 +15,8 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  grid-template-columns: minmax(auto, 595px) minmax(auto, 595px);
+  justify-content: center;
   list-style: none;
   gap: 30px;
 

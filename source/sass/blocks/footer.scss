@@ -1,6 +1,4 @@
 .footer {
-  @include container;
-  padding: 50px 350px;
   background-color: $color-default-dark-blue;
   font-family: $ff-placeholder-pt-mono;
   font-style: normal;
@@ -9,7 +7,8 @@
   line-height: 135%;
   color: $color-transparent;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 50px 0;
 
   @include vp-769 {
     padding: 50px;

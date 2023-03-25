@@ -391,7 +391,7 @@ template {
   font-weight: 400;
   font-display: swap;
   font-family: "Roboto";
-  src: url("../fonts/RobotoCondensed-Regular.ttf") format("woff2");
+  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -399,7 +399,7 @@ template {
   font-weight: 400;
   font-display: swap;
   font-family: "PT Mono";
-  src: url("/fonts/PTMono-Regular.ttf") format("woff2");
+  src: url("../fonts/PTMono-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -407,7 +407,7 @@ template {
   font-weight: 700;
   font-display: swap;
   font-family: "Roboto";
-  src: url("/fonts/RobotoCondensed-Bold.ttf") format("woff2");
+  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2");
 }
 
 *,
@@ -1059,17 +1059,28 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   list-style: none;
   margin: 0;
-  padding: 30px 350px;
+  padding: 30px 90px;
+}
+
+.navigation__email-description,
+.navigation__phone-description {
+  margin-left: 15px;
+}
+
+.navigation__phone {
+  margin-right: 90px;
+}
+
+.navigation__email {
+  margin-right: 25px;
 }
 
 .navigation__link {
@@ -1098,6 +1109,12 @@ button,
   gap: 15px;
 }
 
+.navigation__item:first-child {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .navigation__item:first-child:hover {
   opacity: 1;
   color: rgba(255, 255, 255, 0.7);
@@ -1119,6 +1136,9 @@ button,
 }
 
 .navigation__title {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
   position: relative;
   font-size: 25px;
   font-weight: 700;
@@ -1140,6 +1160,10 @@ button,
 
 .navigation__svg {
   fill: #00B2FF;
+}
+
+.navigation__item:last-child {
+  margin-right: 54px;
 }
 
 .navigation__button {
@@ -1191,10 +1215,9 @@ button,
 }
 
 .base {
-  width: 100%;
+  display: block;
   margin: 0 auto;
-  padding: 0 25px;
-  padding: 185px 280px;
+  padding: 185px 0 185px 20%;
   background-color: #041827;
   background-image: url("../img/bg/base-bg.png");
   background-repeat: no-repeat;
@@ -1209,10 +1232,12 @@ button,
 
 .base__text-770 {
   display: inline;
+  padding: 0 15px;
 }
 
 .base__title {
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   font-weight: 700;
   font-size: 80px;
@@ -1279,11 +1304,8 @@ button,
 }
 
 .advantages {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 25px;
-  padding: 120px 50px;
   background-color: #F8FDFF;
+  padding: 120px 0;
 }
 
 .advantages__list {
@@ -1291,9 +1313,11 @@ button,
   padding: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  -ms-grid-columns: minmax(auto, 595px) minmax(auto, 595px);
+  grid-template-columns: minmax(auto, 595px) minmax(auto, 595px);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   list-style: none;
   gap: 30px;
 }
@@ -1340,12 +1364,11 @@ button,
 }
 
 .about {
-  width: 100%;
   margin: 0 auto;
   padding: 0 25px;
   position: relative;
   background-color: #F8FDFF;
-  padding: 120px 350px 120px 590px;
+  padding: 0 100px 100px 600px;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -1376,7 +1399,7 @@ button,
 
 .about__image {
   position: absolute;
-  top: 120px;
+  top: 0px;
   left: 350px;
 }
 
@@ -1414,11 +1437,8 @@ button,
 }
 
 .service {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 25px;
-  padding: 70px 50px 140px 50px;
   background-color: #041827;
+  padding: 70px 0;
 }
 
 .service__list {
@@ -1426,9 +1446,11 @@ button,
   padding: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  -ms-grid-columns: minmax(auto, 350px) minmax(auto, 350px) minmax(auto, 350px);
+  grid-template-columns: minmax(auto, 350px) minmax(auto, 350px) minmax(auto, 350px);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   list-style: none;
   gap: 85px;
 }
@@ -1458,6 +1480,8 @@ button,
 .service__title {
   margin: 0;
   padding: 0;
+  text-align: center;
+  margin-right: 400px;
   margin-bottom: 40px;
   font-size: 36px;
   line-height: 51px;
@@ -1512,20 +1536,25 @@ button,
 }
 
 .form {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 25px;
   position: relative;
-  padding: 170px 350px 170px 600px;
-  background: -o-linear-gradient(312deg, #1B669F 32.27%, #00B3FF 32.27%);
-  background: linear-gradient(138deg, #1B669F 32.27%, #00B3FF 32.27%);
+  background: -o-linear-gradient(310deg, #1B669F 32.27%, #00B3FF 32.27%);
+  background: linear-gradient(140deg, #1B669F 32.27%, #00B3FF 32.27%);
   background-repeat: no-repeat;
   background-size: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 170px 0;
 }
 
 .form__title {
   margin: 0;
   padding: 0;
+  margin-left: 140px;
+  text-align: center;
   color: #FFFFFF;
   font-weight: 400;
   font-size: 36px;
@@ -1533,10 +1562,12 @@ button,
 }
 
 .form__description {
+  margin-right: 140px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: #FFFFFF;
+  text-align: center;
 }
 
 .form__input {
@@ -1632,9 +1663,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -1707,6 +1738,8 @@ button,
 }
 
 .form__container {
+  margin-left: 200px;
+  max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1724,7 +1757,7 @@ button,
 }
 
 .form__input {
-  width: 48%;
+  width: 44%;
 }
 
 .form__textarea {
@@ -1739,10 +1772,6 @@ button,
 }
 
 .footer {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 25px;
-  padding: 50px 350px;
   background-color: #041827;
   font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
@@ -1753,9 +1782,10 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 50px 0;
 }
 
 .footer__list {

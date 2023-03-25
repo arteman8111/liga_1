@@ -1,6 +1,7 @@
 .base {
-  @include container;
-  padding: 185px 280px;
+  display: block;
+  margin: 0 auto;
+  padding: 185px 0 185px 20%;
   background-color: $color-default-dark-blue;
   background-image: url("../img/bg/base-bg.png");
   background-repeat: no-repeat;
@@ -33,6 +34,7 @@
 
 .base__text-770 {
   display: inline;
+  padding: 0 15px;
 
   @include vp-319 {
     display: none;
@@ -41,6 +43,7 @@
 
 .base__title {
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   font-weight: 700;
   font-size: 80px;
