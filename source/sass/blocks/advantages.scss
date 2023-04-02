@@ -68,7 +68,7 @@
   }
 
   @include vp-319 {
-    padding-left: 25px;
+    padding: 30px;
   }
 }
 
@@ -83,6 +83,9 @@
   @include vp-319 {
     font-size: 20px;
     line-height: 140%;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 }
 

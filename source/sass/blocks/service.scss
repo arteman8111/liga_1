@@ -7,7 +7,7 @@
   }
 
   @include vp-319 {
-    padding: 50px 25px;
+    padding: 50px 25px 86px 25px;
   }
 }
 
@@ -53,22 +53,24 @@
   @include hover {
     .service__link {
       transition: $trans-600;
-      outline: 1px solid $color-sky-blue;
+      outline: 1px solid $color-default-white;
     }
 
     .service__button {
       transition: $trans-600;
-      background-color: $color-default-white;
+      background-color: $color-default-dark-blue;
       opacity: 1;
-
-      svg {
-        fill: $color-sky-blue;
-      }
     }
   }
 
   @include vp-769 {
     min-height: 250px;
+  }
+
+  @include vp-319 {
+    background-position: 0 50%;
+    background-size: cover;
+    background-position-x: left;
   }
 }
 
@@ -154,7 +156,7 @@
 }
 
 .service__title::after {
-  @media(min-width: ($vp-320 - 1px)) {
+  @media(min-width: ($vp-320)) {
     font-size: 36px;
     line-height: 51px;
     font-weight: 400;
@@ -175,6 +177,7 @@
     font-size: 18px;
     line-height: 30px;
     padding: 30px;
+    padding-right: 105px;
   }
 }
 

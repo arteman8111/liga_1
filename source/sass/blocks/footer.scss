@@ -214,7 +214,7 @@
 
 // accordion
 
-@media (max-width: ($vp-320 - 1px)) {
+@media (max-width: ($vp-320)) {
   .footer__container {
     position: relative;
   }
@@ -225,10 +225,14 @@
     background-color: $color-default-dark-blue;
     color: $color-default-white;
     cursor: pointer;
+    margin: 0;
   }
 
   .footer__container .footer__subtitle::after {
-    content: "+";
+    content: " ";
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/svg/plusik.svg");
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

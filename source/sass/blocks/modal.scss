@@ -120,6 +120,7 @@
 
 .modal__content {
   @include custom-checkbox;
+  width: 500px;
   background-color: #00B3FF;
   color: $color-default-white;
   border-radius: 3px;
@@ -219,4 +220,8 @@
 
 .modal__close-btn {
   background-color: $color-sky-blue;
+}
+
+.modal__label textarea {
+  height: 155px;
 }

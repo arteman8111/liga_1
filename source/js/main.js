@@ -55,7 +55,6 @@ aboutCloseButton.addEventListener('click', closeDescription);
 // accordion
 
 const boxes = Array.from(document.querySelectorAll('.footer__container')); // считываем все элементы аккордеона в массив
-
 boxes.forEach((box) => {
   box.addEventListener('click', boxHandler); // при нажатии на бокс вызываем ф-ию boxHanlder
 });
@@ -99,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // input tel validate
 
 let modalInpPhone = document.querySelector('.modal__label-phone');
-let formInpPhone = document.querySelector('.form__label-phone')
+let formInpPhone = document.querySelector('.form__label-phone');
 initPhoneInput(modalInpPhone);
 initPhoneInput(formInpPhone);
 // Проверяем фокус

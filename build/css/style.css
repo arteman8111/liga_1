@@ -744,6 +744,7 @@ button,
 }
 
 .modal__content {
+  width: 500px;
   background-color: #00B3FF;
   color: #FFFFFF;
   border-radius: 3px;
@@ -1045,12 +1046,18 @@ button,
   background-color: #00B2FF;
 }
 
+.modal__label textarea {
+  height: 155px;
+}
+
 .main-header {
   background-color: #041827;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgb(4, 24, 39)));
-  background: -o-linear-gradient(top, #041827 84.9%, rgb(4, 24, 39) 100%);
-  background: linear-gradient(180deg, #041827 84.9%, rgb(4, 24, 39) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   color: #F2F5F7;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -1381,11 +1388,16 @@ button,
 }
 
 .about__title {
+  margin: 0;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
   color: #041827;
+}
+
+.about__description {
+  margin: 20px 0;
 }
 
 .about__description::after {
@@ -1576,6 +1588,7 @@ button,
 
 .form__description {
   margin-right: 140px;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -1979,7 +1992,7 @@ button,
   }
 */
 
-@media (min-width: 319px) {
+@media (min-width: 321px) {
   .service__title::after {
     font-size: 36px;
     line-height: 51px;
@@ -1995,7 +2008,7 @@ button,
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 770px) {
   .navigation__list {
     padding: 20px 50px;
     -webkit-box-pack: justify;
@@ -2014,7 +2027,7 @@ button,
 
   .navigation__email {
     margin-left: auto;
-    margin-right: 30px;
+    margin-right: 40px;
   }
 
   .navigation__item:last-child {
@@ -2114,7 +2127,6 @@ button,
   .form__description {
     padding: 0;
     margin: 0;
-    margin-bottom: 25px;
     text-align: start;
   }
 
@@ -2171,9 +2183,60 @@ button,
   }
 }
 
-@media (max-width: 319px) {
+@media (max-width: 321px) {
+  .footer__container {
+    position: relative;
+  }
+
+  .footer__container .footer__subtitle {
+    position: relative;
+    padding: 20px;
+    background-color: #041827;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .footer__container .footer__subtitle::after {
+    content: " ";
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/svg/plusik.svg");
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 20px;
+    color: #FFFFFF;
+    font-size: 25px;
+  }
+
+  .footer__container.active .footer__subtitle::after {
+    content: " ";
+    width: 15px;
+    height: 1px;
+    border: 1px solid #FFFFFF;
+  }
+
+  .footer__container .footer__list {
+    position: relative;
+    background-color: #041827;
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .footer__address {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 320px) {
   .navigation__list {
-    padding: 15px 25px;
+    padding: 15px 40px 15px 25px;
   }
 
   .navigation__title {
@@ -2190,7 +2253,8 @@ button,
   }
 
   .base {
-    padding: 50px 20px;
+    padding: 80px 25px 190px;
+    background-position: 25% 0;
   }
 
   .base__text-320 {
@@ -2204,14 +2268,18 @@ button,
   .base__title {
     font-size: 36px;
     line-height: 42px;
+    margin-bottom: 20px;
   }
 
   .base__description {
     font-size: 14px;
     line-height: 155%;
+    margin: 0;
   }
 
   .base__button {
+    padding: 11px 32px;
+    margin-top: 50px;
     font-size: 14px;
     line-height: 16px;
   }
@@ -2231,12 +2299,15 @@ button,
   }
 
   .advantages__item {
-    padding-left: 25px;
+    padding: 30px;
   }
 
   .advantages__title {
     font-size: 20px;
     line-height: 140%;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 
   .advantages__logo {
@@ -2253,6 +2324,21 @@ button,
 
   .about {
     padding: 25px;
+    padding-top: 0;
+    padding-bottom: 80px;
+    font-size: 14px;
+    line-height: 134.4%;
+  }
+
+  .about__subdescription {
+    font-size: 14px;
+    line-height: 134.4%;
+    margin: 20px 0;
+  }
+
+  .about__title {
+    font-size: 28px;
+    line-height: 140.62%;
   }
 
   .about__description::after {
@@ -2268,7 +2354,7 @@ button,
   }
 
   .service {
-    padding: 50px 25px;
+    padding: 50px 25px 86px 25px;
   }
 
   .service__list {
@@ -2280,6 +2366,12 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 30px;
+  }
+
+  .service__item {
+    background-position: 0 50%;
+    background-size: cover;
+    background-position-x: left;
   }
 
   .service__title {
@@ -2309,15 +2401,21 @@ button,
     font-size: 18px;
     line-height: 30px;
     padding: 30px;
+    padding-right: 105px;
   }
 
   .service__button {
     padding: 17px 20px;
   }
 
+  .form {
+    padding: 50px 25px 90px 25px;
+  }
+
   .form__title {
     font-size: 30px;
     line-height: 140.62%;
+    margin-bottom: 20px;
   }
 
   .form__description {
@@ -2328,17 +2426,23 @@ button,
     line-height: 134.4%;
   }
 
+  .form__input {
+    width: 100%;
+  }
+
   .form__button {
     width: 100%;
+    margin-top: 10px;
   }
 
   .form__label {
     width: 100%;
+    margin-top: 25px;
   }
 
   .form__container {
     margin: 0;
-    gap: 0;
+    gap: 20px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -2346,7 +2450,10 @@ button,
 
   .form__label-phone {
     width: 100%;
-    margin-bottom: 20px;
+  }
+
+  .form__textarea {
+    max-height: 180px;
   }
 
   .form__label {
@@ -2416,53 +2523,8 @@ button,
     gap: 15px;
   }
 
-  .footer__container {
-    position: relative;
-  }
-
-  .footer__container .footer__subtitle {
-    position: relative;
-    padding: 20px;
-    background-color: #041827;
-    color: #FFFFFF;
-    cursor: pointer;
-  }
-
-  .footer__container .footer__subtitle::after {
-    content: "+";
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 20px;
-    color: #FFFFFF;
-    font-size: 25px;
-  }
-
-  .footer__container.active .footer__subtitle::after {
-    content: " ";
-    width: 15px;
-    height: 1px;
-    border: 1px solid #FFFFFF;
-  }
-
-  .footer__container .footer__list {
-    position: relative;
-    background-color: #041827;
-    overflow: hidden;
-    max-height: 0;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
-  }
-
-  .footer__address {
-    margin-bottom: 35px;
-  }
-
   .link__list {
-    margin-top: 15px;
+    margin: 0;
   }
 }
 
@@ -2492,18 +2554,14 @@ button,
     -webkit-transition: 0.6s ease;
     -o-transition: 0.6s ease;
     transition: 0.6s ease;
-    outline: 1px solid #00B2FF;
+    outline: 1px solid #FFFFFF;
   }
 
   .service__item:hover:not(.focus-visible) .service__button {
     -webkit-transition: 0.6s ease;
     -o-transition: 0.6s ease;
     transition: 0.6s ease;
-    background-color: #FFFFFF;
+    background-color: #041827;
     opacity: 1;
-  }
-
-  .service__item:hover:not(.focus-visible) .service__button svg {
-    fill: #00B2FF;
   }
 }
