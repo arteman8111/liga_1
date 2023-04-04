@@ -1,42 +1,44 @@
 .navigation__list {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: start;
   list-style: none;
   margin: 0;
-  padding: 30px 90px;
+  padding: 30px 350px;
 
-  @include vp-769 {
-    padding: 20px 50px;
+  @include vp-1919 {
+    padding: 20px 80px 20px 50px;
     justify-content: space-between;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     padding: 15px 40px 15px 25px;
+  }
+}
+
+.navigation__email {
+  margin-left: auto;
+}
+
+.navigation__phone {
+  margin-left: 120px;
+
+  @include vp-1919 {
+    margin-left: 35px;
   }
 }
 
 .navigation__email-description,
 .navigation__phone-description {
   margin-left: 15px;
-  @include vp-769 {
+
+  @include vp-1919 {
     display: none;
   }
 }
 
-.navigation__phone {
-  margin-right: 90px;
-  @include vp-769 {
-    margin-right: 0;
-  }
-}
-
 .navigation__email {
-  margin-right: 25px; //170;
-  @include vp-769 {
-    margin-left: auto;
-    margin-right: 40px;
-  }
+  margin-left: auto;
 }
 
 .navigation__link {
@@ -57,11 +59,11 @@
   position: relative;
   display: flex;
   gap: 15px
-
 }
 
 .navigation__item:first-child {
   align-items: center;
+
   &:hover {
     opacity: 1;
     color: $color-transparent;
@@ -85,15 +87,15 @@
 
 .navigation__title {
   margin: 0;
+  margin-left: 15px;
   padding: 0;
   font-family: $ff-placeholder;
   position: relative;
   font-size: 25px;
   font-weight: 700;
-  margin-left: 15px;
   color: $color-default-gray;
 
-  @include vp-319 {
+  @include vp-769 {
     display: none;
   }
 }
@@ -109,7 +111,7 @@
   color: $color-transparent;
   line-height: 14px;
 
-  @include vp-319 {
+  @include vp-769 {
     display: none;
   }
 }
@@ -117,15 +119,16 @@
 .navigation__svg {
   fill: $color-sky-blue;
 
-  @include vp-319 {
+  @include vp-769 {
     width: 35px;
     height: 35px;
   }
 }
 
 .navigation__item:last-child {
-  margin-right: 54px; //150
-  @include vp-769 {
+  margin-left: auto;
+
+  @include vp-1919 {
     margin: 0;
   }
 }
@@ -150,7 +153,7 @@
     opacity: 0.6;
   }
 
-  @include vp-769 {
+  @include vp-1919 {
     display: none;
   }
 }

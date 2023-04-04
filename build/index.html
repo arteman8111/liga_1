@@ -149,17 +149,16 @@
         <h2 class="form__title">Остались вопросы? Задайте их нам!</h2>
         <p class="form__description">Мы проконсультируем Вас бесплатно</p>
         <picture>
-          <source srcset="../img/form/airlane.webp 1x,  ../img/form/airlane@2x.webp 2x" type="image/webp">
-          <source srcset="../img/form/airlane.png 1x,  ../img/form/airlane@2x.png 2x">
-          <img class="form__img" src="../img/form/airlane.png" width="350" height="589" alt="Самолет">
+          <source srcset="../img/form/airplane.webp 1x,  ../img/form/airplane@2x.webp 2x" type="image/webp">
+          <source srcset="../img/form/airplane.png 1x,  ../img/form/airplane@2x.png 2x">
+          <img class="form__img" src="../img/form/airplane.png" width="510" height="285" alt="Самолет">
         </picture>
         <form action="https://htmlacademy.ru/study" method="post">
           <div class="form__container">
-            <label for="name" class="visually-hidden"></label>
+            <label class="visually-hidden" for="name"></label>
             <input class="form__input" type="text" id="name" name="name" placeholder="Имя" required>
-            <label class="form__label-phone" for="tel">
-              <input class="form__input form__input-phone" type="tel" id="tel" name="tel" placeholder="Телефон" required>
-            </label>
+            <label class="visually-hidden" for="tel"></label>
+            <input class="form__input form__input-phone" type="tel" id="tel" name="tel" placeholder="Телефон" required>
             <label for="form-description" class="visually-hidden"></label>
             <textarea class="form__input form__textarea" name="form-description" id="form-description" cols="30"
               rows="10" placeholder="Ваш вопрос" required></textarea>

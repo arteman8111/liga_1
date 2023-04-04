@@ -1,18 +1,21 @@
 .form {
+  @include custom-checkbox;
   position: relative;
   background: linear-gradient(140deg, #1B669F 32.27%, #00B3FF 32.27%);
   background-repeat: no-repeat;
   background-size: auto;
-  display: flex;
-  justify-content: center;
-  padding: 170px 0;
+  padding: 170px 360px 250px 975px;
 
-  @include vp-769 {
+  @include vp-1919 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
     background: $color-sky-blue;
-    padding: 50px 25px;
+    padding: 50px 50px 125px 50px;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     padding: 50px 25px 90px 25px;
   }
 }
@@ -20,33 +23,40 @@
 .form__title {
   margin: 0;
   padding: 0;
-  margin-left: 140px;
-  text-align: center;
   color: $color-default-white;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
 
-  @include vp-319 {
+  @include vp-1919 {
+    width: 100%;
+  }
+
+  @include vp-769 {
+    margin: 0;
     font-size: 30px;
     line-height: 140.62%;
-    margin-bottom: 20px;
   }
 }
 
 .form__description {
+  margin: 0;
+  padding: 0;
   margin-right: 140px;
+  margin-bottom: 15px;
   font-family: $ff-placeholder-pt-mono;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: $color-default-white;
-  text-align: center;
 
-  @include vp-319 {
+  @include vp-1919 {
+    width: 100%;
+  }
+
+  @include vp-769 {
     margin: 0;
     margin-bottom: 40px;
-    padding: 0;
     font-size: 14px;
     line-height: 134.4%;
   }
@@ -62,14 +72,21 @@
   background-color: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
   color: $color-default-white;
+  width: 275px;
 
-  @include vp-319 {
+  @include vp-1919 {
+    width: 47%;
+  }
+
+  @include vp-769 {
     width: 100%;
   }
 }
 
 .form__input-phone {
-  width: 100%;
+  @include vp-1919 {
+    width: 47%;
+  }
 }
 
 .form__input:hover,
@@ -84,11 +101,11 @@
 
 .form__img {
   position: absolute;
-  top: 300px;
-  left: 50px;
+  top: 230px;
+  left: 350px;
 
-  @media (max-width: 1284px) {
-    display: none;
+  @include vp-1919 {
+    display: none
   }
 }
 
@@ -96,7 +113,12 @@
   @include btn;
   display: block;
   border: none;
-  padding: 15px 65px;
+  padding: 15px 60px;
+
+  @include vp-1919 {
+    padding: 15px 65px;
+    width: 40%;
+  }
 
   &:hover {
     opacity: 1;
@@ -105,7 +127,7 @@
     color: $color-default-dark-blue;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     width: 100%;
     margin-top: 10px;
   }
@@ -118,61 +140,46 @@
   color: $color-default-white;
   opacity: 0.8;
 
-  @include vp-319 {
+  @include vp-769 {
     width: 100%;
     margin-top: 25px;
   }
 }
 
-.form {
-  @include custom-checkbox;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .form__container {
-  margin-left: 200px;
-  max-width: 600px;
+  margin: 0;
+  width: 585px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 20px;
 
-  @include vp-769 {
-    margin: 0;
+  @include vp-1919 {
+    width: auto;
   }
 
-  @include vp-319 {
-    margin: 0;
+  @include vp-769 {
     gap: 20px;
     display: inline-flex;
   }
 }
 
-.form__title,
-.form__description {
-  width: 100%;
-
-  @include vp-769 {
-    padding: 0;
-    margin: 0;
-    text-align: start;
-  }
-}
-
 .form__label-phone {
-  width: 44%;
-
-  @include vp-319 {
+  @include vp-769 {
     width: 100%;
   }
 }
 
 .form__textarea {
-  width: 100%;
+  width: 580px;
+  max-height: 155px;
+  padding-top: 32px;
 
-  @include vp-319 {
+  @include vp-1919 {
+    width: 100%;
+  }
+
+  @include vp-769 {
     max-height: 180px;
   }
 }
@@ -181,7 +188,7 @@
   width: 50%;
   order: 2;
 
-  @include vp-319 {
+  @include vp-769 {
     margin-top: 25px;
   }
 }

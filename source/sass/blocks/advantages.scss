@@ -2,11 +2,11 @@
   background-color: $color-bg-white;
   padding: 120px 50px;
 
-  @include vp-769 {
-    padding: 50px 50px;
+  @include vp-1919 {
+    padding: 80px 50px;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     padding: 50px 25px;
   }
 }
@@ -20,34 +20,22 @@
   list-style: none;
   gap: 30px;
 
-  @include vp-769 {
-    grid-template-columns: minmax(auto, 320px) minmax(auto, 320px);
+  @include vp-1919 {
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     gap: 29px;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     display: flex;
     flex-direction: column;
   }
 }
 
 .advantages__item {
-  margin: 0;
-  padding: 40px 0;
-  max-width: 595px;
-  height: 300px;
+  padding: 40px 50px 90px 45px;
   border: 1px solid $color-bg-small-white;
   border-left: 5px solid $color-sky-blue;
-  font-family: $ff-placeholder-pt-mono;
-  font-size: 16px;
-  line-height: 135%;
-  color: $color-default-dark-blue;
-  padding-left: 40px;
-  overflow: hidden;
-  min-height: 300px;
-  box-sizing: border-box;
-
   @include hover {
     background-color: $color-sky-blue;
     color: $color-bg-white;
@@ -61,13 +49,16 @@
     }
   }
 
-  @include vp-769 {
-    padding: 20px 0;
-    padding-left: 41px;
-    height: auto;
+  @include vp-1919 {
+    margin: 0;
+    padding: 40px 35px 35px 45px;
+    font-family: $ff-placeholder-pt-mono;
+    font-size: 16px;
+    line-height: 135%;
+    color: $color-default-dark-blue;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     padding: 30px;
   }
 }
@@ -80,7 +71,7 @@
   font-weight: 400;
   color: $color-sky-blue;
 
-  @include vp-319 {
+  @include vp-769 {
     font-size: 20px;
     line-height: 140%;
     margin: 0;
@@ -92,7 +83,7 @@
 .advantages__logo {
   fill: $color-sky-blue;
 
-  @include vp-319 {
+  @include vp-769 {
     width: 29px;
     height: 29px;
   }
@@ -100,12 +91,12 @@
 
 .advantages__description {
   margin: 0;
-
-  @include vp-769 {
+  font-family: $ff-placeholder-pt-mono;
+  @include vp-1919 {
     margin: 0;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     font-size: 14px;
     line-height: 135%;
     margin: 0;

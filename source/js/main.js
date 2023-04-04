@@ -53,11 +53,12 @@ popup.addEventListener('click', getDescription);
 aboutCloseButton.addEventListener('click', closeDescription);
 
 // accordion
-
 const boxes = Array.from(document.querySelectorAll('.footer__container')); // считываем все элементы аккордеона в массив
-boxes.forEach((box) => {
-  box.addEventListener('click', boxHandler); // при нажатии на бокс вызываем ф-ию boxHanlder
-});
+if (window.screen.width < 769) {
+  boxes.forEach((box) => {
+    box.addEventListener('click', boxHandler); // при нажатии на бокс вызываем ф-ию boxHanlder
+  });
+}
 
 function boxHandler(e) {
   e.preventDefault(); // сбрасываем стандартное поведение
@@ -72,7 +73,6 @@ function boxHandler(e) {
     currentContent.style.maxHeight = 0; // скрываем контент
   }
 }
-
 // smooth scroll
 const smoothLink = document.querySelector('.base__button');
 smoothLink.addEventListener('click', function () {

@@ -1,12 +1,12 @@
 .service {
   background-color: $color-default-dark-blue;
-  padding: 70px 25px;
+  padding: 70px 350px 140px 350px;
 
-  @include vp-769 {
+  @include vp-1919 {
     padding: 60px 50px;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     padding: 50px 25px 86px 25px;
   }
 }
@@ -15,17 +15,17 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: minmax(auto,350px) minmax(auto,350px) minmax(auto,350px);
+  grid-template-columns: minmax(auto, 350px) minmax(auto, 350px) minmax(auto, 350px);
   justify-content: center;
   list-style: none;
   gap: 85px;
 
-  @include vp-769 {
+  @include vp-1919 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -34,21 +34,18 @@
 
 .service__item {
   width: 100%;
+  min-height: 100%;
   position: relative;
   background-image: url("../img/service/element-bg-1.png");
-  background-image: -webkit-image-set(
-    url("../img/service/element-bg-1@2x.webp") 2x,
-    url("../img/service/element-bg-1.webp") 1x,
-    url("../img/service/element-bg-1@2x.png") 2x
-    url("../img/service/element-bg-1.png") 1x);
-  background-image: image-set(
-    url("../img/service/element-bg-1@2x.webp") type("image/webp") 2x,
-    url("../img/service/element-bg-1.webp") type("image/webp") 1x,
-    url("../img/service/element-bg-1@2x.png") 2x,
-    url("../img/service/element-bg-1.png") 1x);
+  background-image: -webkit-image-set(url("../img/service/element-bg-1@2x.webp") 2x,
+      url("../img/service/element-bg-1.webp") 1x,
+      url("../img/service/element-bg-1@2x.png") 2x url("../img/service/element-bg-1.png") 1x);
+  background-image: image-set(url("../img/service/element-bg-1@2x.webp") type("image/webp") 2x,
+      url("../img/service/element-bg-1.webp") type("image/webp") 1x,
+      url("../img/service/element-bg-1@2x.png") 2x,
+      url("../img/service/element-bg-1.png") 1x);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
 
   @include hover {
     .service__link {
@@ -63,11 +60,19 @@
     }
   }
 
-  @include vp-769 {
+  @include vp-1919 {
     min-height: 250px;
+    background-image: url("../img/service/element-bg-1-tablet.png");
+    background-image: -webkit-image-set(url("../img/service/element-bg-1-tablet@2x.webp") 2x,
+        url("../img/service/element-bg-1-tablet.webp") 1x,
+        url("../img/service/element-bg-1-tablet@2x.png") 2x url("../img/service/element-bg-1-tablet.png") 1x);
+    background-image: image-set(url("../img/service/element-bg-1-tablet@2x.webp") type("image/webp") 2x,
+        url("../img/service/element-bg-1-tablet.webp") type("image/webp") 1x,
+        url("../img/service/element-bg-1-tablet@2x.png") 2x,
+        url("../img/service/element-bg-1-tablet.png") 1x);
   }
 
-  @include vp-319 {
+  @include vp-769 {
     background-position: 0 50%;
     background-size: cover;
     background-position-x: left;
@@ -76,43 +81,60 @@
 
 .service__item:nth-child(2) {
   background-image: url("../img/service/element-bg-2.png");
-  background-image: -webkit-image-set(
-    url("../img/service/element-bg-2@2x.webp") 2x,
-    url("../img/service/element-bg-2.webp") 1x,
-    url("../img/service/element-bg-2@2x.png") 2x
-    url("../img/service/element-bg-2.png") 1x);
-  background-image: image-set(
-    url("../img/service/element-bg-2@2x.webp") type("image/webp") 2x,
-    url("../img/service/element-bg-2.webp") type("image/webp") 1x,
-    url("../img/service/element-bg-2@2x.png") 2x,
-    url("../img/service/element-bg-2.png") 1x);
+  background-image: -webkit-image-set(url("../img/service/element-bg-2@2x.webp") 2x,
+      url("../img/service/element-bg-2.webp") 1x,
+      url("../img/service/element-bg-2@2x.png") 2x url("../img/service/element-bg-2.png") 1x);
+  background-image: image-set(url("../img/service/element-bg-2@2x.webp") type("image/webp") 2x,
+      url("../img/service/element-bg-2.webp") type("image/webp") 1x,
+      url("../img/service/element-bg-2@2x.png") 2x,
+      url("../img/service/element-bg-2.png") 1x);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+
+  @include vp-1919 {
+    background-image: url("../img/service/element-bg-2-tablet.png");
+    background-image: -webkit-image-set(url("../img/service/element-bg-2-tablet@2x.webp") 2x,
+        url("../img/service/element-bg-2-tablet.webp") 1x,
+        url("../img/service/element-bg-2-tablet@2x.png") 2x url("../img/service/element-bg-2-tablet.png") 1x);
+    background-image: image-set(url("../img/service/element-bg-2-tablet@2x.webp") type("image/webp") 2x,
+        url("../img/service/element-bg-2-tablet.webp") type("image/webp") 1x,
+        url("../img/service/element-bg-2-tablet@2x.png") 2x,
+        url("../img/service/element-bg-2-tablet.png") 1x);
+
+  }
 }
 
 .service__item:nth-child(3) {
   background-image: url("../img/service/element-bg-3.png");
-  background-image: -webkit-image-set(
-    url("../img/service/element-bg-3@2x.webp") 2x,
-    url("../img/service/element-bg-3.webp") 1x,
-    url("../img/service/element-bg-3@2x.png") 2x
-    url("../img/service/element-bg-3.png") 1x);
-  background-image: image-set(
-    url("../img/service/element-bg-3@2x.webp") type("image/webp") 2x,
-    url("../img/service/element-bg-3.webp") type("image/webp") 1x,
-    url("../img/service/element-bg-3@2x.png") 2x,
-    url("../img/service/element-bg-3.png") 1x);
+  background-image: -webkit-image-set(url("../img/service/element-bg-3@2x.webp") 2x,
+      url("../img/service/element-bg-3.webp") 1x,
+      url("../img/service/element-bg-3@2x.png") 2x url("../img/service/element-bg-3.png") 1x);
+  background-image: image-set(url("../img/service/element-bg-3@2x.webp") type("image/webp") 2x,
+      url("../img/service/element-bg-3.webp") type("image/webp") 1x,
+      url("../img/service/element-bg-3@2x.png") 2x,
+      url("../img/service/element-bg-3.png") 1x);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+
+  @include vp-1919 {
+    background-image: url("../img/service/element-bg-3-tablet.png");
+    background-image: -webkit-image-set(url("../img/service/element-bg-3-tablet@2x.webp") 2x,
+        url("../img/service/element-bg-3-tablet.webp") 1x,
+        url("../img/service/element-bg-3-tablet@2x.png") 2x url("../img/service/element-bg-3-tablet.png") 1x);
+    background-image: image-set(url("../img/service/element-bg-3-tablet@2x.webp") type("image/webp") 2x,
+        url("../img/service/element-bg-3-tablet.webp") type("image/webp") 1x,
+        url("../img/service/element-bg-3-tablet@2x.png") 2x,
+        url("../img/service/element-bg-3-tablet.png") 1x);
+  }
 }
 
 .service__link {
   display: block;
   min-height: 650px;
 
-  @include vp-769 {
+  @include vp-1919 {
     min-height: 250px;
   }
 }
@@ -128,13 +150,13 @@
   font-weight: 400;
   color: $color-default-white;
 
-  @include vp-769 {
+  @include vp-1919 {
     text-align: start;
     margin: 0;
     margin-bottom: 50px;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     margin: 0;
     text-align: start;
     margin-bottom: 30px;
@@ -146,7 +168,7 @@
 }
 
 .service__title::before {
-  @include vp-319 {
+  @include vp-769 {
     font-size: 28px;
     line-height: 140.62%;
     font-weight: 400;
@@ -156,7 +178,7 @@
 }
 
 .service__title::after {
-  @media(min-width: ($vp-320)) {
+  @media (min-width: $vp-770) {
     font-size: 36px;
     line-height: 51px;
     font-weight: 400;
@@ -171,9 +193,15 @@
   line-height: 30px;
   font-weight: 400;
   color: $color-default-white;
-  padding: 50px 40px;
+  padding: 50px 150px 0 40px;
 
-  @include vp-319 {
+  @include vp-1919 {
+    margin: 0;
+    padding: 40px 45px 155px 45px;
+    width: 240px;
+  }
+
+  @include vp-769 {
     font-size: 18px;
     line-height: 30px;
     padding: 30px;
@@ -184,18 +212,18 @@
 .service__button {
   position: absolute;
   @include btn-abstract;
-  top: 590px;
+  top: 588px;
   right: 0;
   padding: 26px 26px 26px 30px;
   background-color: $color-sky-blue;
   border-radius: 3px 0px 0px 0px;
   border: none;
 
-  @include vp-769 {
-    top: 205px;
+  @include vp-1919 {
+    top: 191px;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     padding: 17px 20px;
   }
 

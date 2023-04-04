@@ -1,7 +1,7 @@
 .base {
   display: block;
   margin: 0 auto;
-  padding: 185px 0 185px 20%;
+  padding: 185px 725px 280px 475px;
   background-color: $color-default-dark-blue;
   background-image: url("../img/bg/base-bg.png");
   background-image: -webkit-image-set(
@@ -19,13 +19,13 @@
   background-size: cover;
   color: $color-default-gray;
 
-  @include vp-769 {
-    padding: 50px 85px;
+  @include vp-1919 {
+    padding: 85px 115px 200px 50px;
     font-size: 22px;
     line-height: 155%;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     padding: 80px 25px 190px ;
     background-position: 25% 0;
   }
@@ -34,7 +34,7 @@
 .base__text-320 {
   display: none;
 
-  @include vp-319 {
+  @include vp-769 {
     display: inline;
   }
 }
@@ -43,7 +43,7 @@
   display: inline;
   padding: 0 15px;
 
-  @include vp-319 {
+  @include vp-769 {
     display: none;
   }
 }
@@ -58,12 +58,13 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
 
-  @include vp-769 {
+  @include vp-1919 {
+    margin: 0;
     font-size: 64px;
     line-height: 75px;
   }
 
-  @include vp-319 {
+  @include vp-769 {
     font-size: 36px;
     line-height: 42px;
     margin-bottom: 20px;
@@ -79,8 +80,10 @@
   font-weight: 400;
   font-size: 22px;
   line-height: 155%;
-
-  @include vp-319 {
+  @include vp-1919 {
+    margin: 0;;
+  }
+  @include vp-769 {
     font-size: 14px;
     line-height: 155%;
     margin: 0;
@@ -109,10 +112,17 @@
   &:active {
     opacity: 0.6;
   }
-
-  @include vp-319 {
-    padding: 11px 32px;
+  @include vp-1919 {
     margin-top: 50px;
+    padding: 15px 25px;
+    margin-left: 40px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  @include vp-769 {
+    margin: 0;
+    margin-top: 50px;
+    padding: 11px 32px;
     font-size: 14px;
     line-height: 16px;
   }
