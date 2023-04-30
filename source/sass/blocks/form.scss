@@ -1,10 +1,12 @@
 .form {
   @include custom-checkbox;
-  position: relative;
   background: linear-gradient(140deg, #1B669F 32.27%, #00B3FF 32.27%);
   background-repeat: no-repeat;
   background-size: auto;
-  padding: 170px 360px 250px 975px;
+  padding: 0 40px;
+  padding-left: 650px;
+  padding-top: 171px;
+  padding-bottom: 250px;
 
   @include vp-1919 {
     display: flex;
@@ -18,6 +20,12 @@
   @include vp-769 {
     padding: 50px 25px 90px 25px;
   }
+}
+
+.form__wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
 }
 
 .form__title {
@@ -101,8 +109,8 @@
 
 .form__img {
   position: absolute;
-  top: 230px;
-  left: 350px;
+  top: 70px;
+  left: -650px;
 
   @include vp-1919 {
     display: none

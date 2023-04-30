@@ -48,10 +48,12 @@
     <main>
       <!-- base -->
       <section class="base">
-        <h1 class="base__title">Печатные платы</h1>
-        <p class="base__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="base__button" href="#form"><span class="base__text-320">бесплатная консультация</span><span
-            class="base__text-770">Получить бесплатную консультацию</span></a>
+        <div class="base__wrapper">
+          <h1 class="base__title">Печатные платы</h1>
+          <p class="base__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="base__button" href="#form"><span class="base__text-320">бесплатная консультация</span><span
+              class="base__text-770">Получить бесплатную консультацию</span></a>
+        </div>
       </section>
       <!-- advantages -->
       <section class="advantages">
@@ -146,89 +148,94 @@
       </section>
       <!-- form -->
       <section class="form custom" id="form">
-        <h2 class="form__title">Остались вопросы? Задайте их нам!</h2>
-        <p class="form__description">Мы проконсультируем Вас бесплатно</p>
-        <picture>
-          <source srcset="../img/form/airplane.webp 1x,  ../img/form/airplane@2x.webp 2x" type="image/webp">
-          <source srcset="../img/form/airplane.png 1x,  ../img/form/airplane@2x.png 2x">
-          <img class="form__img" src="../img/form/airplane.png" width="510" height="285" alt="Самолет">
-        </picture>
-        <form action="https://htmlacademy.ru/study" method="post">
-          <div class="form__container">
-            <label class="visually-hidden" for="name"></label>
-            <input class="form__input" type="text" id="name" name="name" placeholder="Имя" required>
-            <label class="visually-hidden" for="tel"></label>
-            <input class="form__input form__input-phone" type="tel" id="tel" name="tel" placeholder="Телефон" required>
-            <label for="form-description" class="visually-hidden"></label>
-            <textarea class="form__input form__textarea" name="form-description" id="form-description" cols="30"
-              rows="10" placeholder="Ваш вопрос" required></textarea>
+        <div class="form__wrapper">
+          <h2 class="form__title">Остались вопросы? Задайте их нам!</h2>
+          <p class="form__description">Мы проконсультируем Вас бесплатно</p>
+          <picture>
+            <source srcset="../img/form/airplane.webp 1x,  ../img/form/airplane@2x.webp 2x" type="image/webp">
+            <source srcset="../img/form/airplane.png 1x,  ../img/form/airplane@2x.png 2x">
+            <img class="form__img" src="../img/form/airplane.png" width="510" height="285" alt="Самолет">
+          </picture>
+          <form action="https://htmlacademy.ru/study" method="post">
+            <div class="form__container">
+              <label class="visually-hidden" for="name"></label>
+              <input class="form__input" type="text" id="name" name="name" placeholder="Имя" required>
+              <label class="visually-hidden" for="tel"></label>
+              <input class="form__input form__input-phone" type="tel" id="tel" name="tel" placeholder="Телефон"
+                required>
+              <label for="form-description" class="visually-hidden"></label>
+              <textarea class="form__input form__textarea" name="form-description" id="form-description" cols="30"
+                rows="10" placeholder="Ваш вопрос" required></textarea>
 
-            <input class="custom__checkbox" type="checkbox" id="form__checkbox">
-            <label class="custom__label form__label" for="form__checkbox">Я согласен на обработку персональных
-              данных</label>
-            <button class="form__button" type="submit">Задать вопрос</button>
-          </div>
-        </form>
+              <input class="custom__checkbox" type="checkbox" id="form__checkbox">
+              <label class="custom__label form__label" for="form__checkbox">Я согласен на обработку персональных
+                данных</label>
+              <button class="form__button" type="submit">Задать вопрос</button>
+            </div>
+          </form>
+        </div>
       </section>
       <!-- footer -->
       <footer class="main-footer footer">
-        <div class="footer__box">
-          <div class="footer__logo">
-            <h2 class="footer__title">Smart Device</h2>
-            <svg class="footer__svg" width="55" height="55">
-              <use xlink:href="img/sprite.svg#navigation-circuit"></use>
-            </svg>
+        <div class="footer__wrapper">
+          <div class="footer__box">
+            <div class="footer__logo">
+              <h2 class="footer__title">Smart Device</h2>
+              <svg class="footer__svg" width="55" height="55">
+                <use xlink:href="img/sprite.svg#navigation-circuit"></use>
+              </svg>
+            </div>
+            <div class="link">
+              <ul class="link__list">
+                <li class="link__item">
+                  <a href="#">
+                    <span class="visually-hidden">Одноклассники</span>
+                    <svg class="link__logo" width="40">
+                      <use xlink:href="img/sprite.svg#footer__classmates"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="link__item">
+                  <a href="#">
+                    <span class="visually-hidden">Вконтакте</span>
+                    <svg class="link__logo" width="40">
+                      <use xlink:href="img/sprite.svg#footer__vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="link__item">
+                  <a href="#">
+                    <span class="visually-hidden">Пинтерест</span>
+                    <svg class="link__logo" width="40">
+                      <use xlink:href="img/sprite.svg#footer__pinterest"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="link">
-            <ul class="link__list">
-              <li class="link__item">
-                <a href="#">
-                  <span class="visually-hidden">Одноклассники</span>
-                  <svg class="link__logo" width="40">
-                    <use xlink:href="img/sprite.svg#footer__classmates"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="link__item">
-                <a href="#">
-                  <span class="visually-hidden">Вконтакте</span>
-                  <svg class="link__logo" width="40">
-                    <use xlink:href="img/sprite.svg#footer__vk"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="link__item">
-                <a href="#">
-                  <span class="visually-hidden">Пинтерест</span>
-                  <svg class="link__logo" width="40">
-                    <use xlink:href="img/sprite.svg#footer__pinterest"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+          <div class="footer__container">
+            <h3 class="footer__subtitle">Разделы сайта</h3>
+            <ol class="footer__list">
+              <li class="footer__item"><a href="#">О Компании</a></li>
+              <li class="footer__item footer__order"><a href="#">Комплектующие</a></li>
+              <li class="footer__item"><a href="#">Продукты</a></li>
+              <li class="footer__item footer__order"><a href="#">Доставка</a></li>
+              <li class="footer__item"><a href="#">Производство печатных плат</a></li>
+              <li class="footer__item footer__order"><a href="#">Контакты</a></li>
+              <li class="footer__item"><a href="#">Монтаж печатных плат</a></li>
+            </ol>
           </div>
+          <address class="footer__container footer__address">
+            <div class="footer__subtitle">Наш офис</div>
+            <div class="footer__list">
+              <p class="footer__description">г. Мытищи, Олимпийский проспект, д.10</p>
+              <a href="+7(495)5894050" class="footer__link">+7 (495) 589-40-50</a>
+              <a href="+7(925)3895829" class="footer__link">+7 (925) 389-58-29</a>
+              <a href="+7(925)3647813" class="footer__link">+7 (925) 364-78-13</a>
+            </div>
+          </address>
         </div>
-        <div class="footer__container">
-          <h3 class="footer__subtitle">Разделы сайта</h3>
-          <ol class="footer__list">
-            <li class="footer__item"><a href="#">О Компании</a></li>
-            <li class="footer__item footer__order"><a href="#">Комплектующие</a></li>
-            <li class="footer__item"><a href="#">Продукты</a></li>
-            <li class="footer__item footer__order"><a href="#">Доставка</a></li>
-            <li class="footer__item"><a href="#">Производство печатных плат</a></li>
-            <li class="footer__item footer__order"><a href="#">Контакты</a></li>
-            <li class="footer__item"><a href="#">Монтаж печатных плат</a></li>
-          </ol>
-        </div>
-        <address class="footer__container footer__address">
-          <div class="footer__subtitle">Наш офис</div>
-          <div class="footer__list">
-            <p class="footer__description">г. Мытищи, Олимпийский проспект, д.10</p>
-            <a href="+7(495)5894050" class="footer__link">+7 (495) 589-40-50</a>
-            <a href="+7(925)3895829" class="footer__link">+7 (925) 389-58-29</a>
-            <a href="+7(925)3647813" class="footer__link">+7 (925) 364-78-13</a>
-          </div>
-        </address>
       </footer>
     </main>
   </div>

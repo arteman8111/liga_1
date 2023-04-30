@@ -1,7 +1,17 @@
 .footer {
   margin: 0;
-  padding: 50px;
+  padding: 50px 40px;
   background-color: $color-default-dark-blue;
+  display: flex;
+  justify-content: center;
+
+  @include vp-769 {
+    padding: 0;
+  }
+}
+
+.footer__wrapper {
+  max-width: $vp-1920 - 80px;
   font-family: $ff-placeholder-pt-mono;
   font-style: normal;
   font-weight: 400;

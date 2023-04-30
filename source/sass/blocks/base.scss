@@ -1,7 +1,8 @@
 .base {
-  display: block;
-  margin: 0 auto;
-  padding: 185px 725px 280px 475px;
+  display: flex;
+  justify-content: center;
+  margin-left: -70px;
+  padding: 185px 50px 275px;
   background-color: $color-default-dark-blue;
   background-image: url("../img/bg/base-bg.png");
   background-image: -webkit-image-set(
@@ -20,7 +21,8 @@
   color: $color-default-gray;
 
   @include vp-1919 {
-    padding: 85px 115px 200px 50px;
+    margin-left: 0px;
+    padding: 85px 115px 200px 90px;
     font-size: 22px;
     line-height: 155%;
   }
@@ -28,6 +30,20 @@
   @include vp-769 {
     padding: 80px 25px 190px ;
     background-position: 25% 0;
+  }
+}
+
+.base__wrapper {
+  max-width: 725px;
+  margin-left: -100px;
+  @include vp-1919 {
+    margin: 0;
+    max-width: 630px;
+  }
+
+  @include vp-769 {
+    margin: 0;
+    max-width: auto;
   }
 }
 

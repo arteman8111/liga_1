@@ -1,11 +1,14 @@
 .about {
+  margin: 0 auto;
   position: relative;
   background-color: $color-bg-white;
-  padding: 0 350px 100px 600px;
+  padding: 100px 40px;
+  padding-top: 0;
   font-family: $ff-placeholder-pt-mono;
   font-size: 16px;
   line-height: 22px;
   color: $color-default-dark-blue;
+  max-width: 1220px - 80px;
 
   @include vp-1919 {
     padding: 0 50px;
@@ -66,8 +69,8 @@
 
 .about__image {
   position: absolute;
-  top: 0px;
-  left: 350px;
+  top: 0;
+  left: -220px;
 
   @include vp-1919 {
     left: 20px;
